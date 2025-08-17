@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed ElHarmil - SOC Analyst Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Particles background -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+  
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="spinner"></div>
+  </div>
+  
+  <!-- Scroll progress -->
+  <div id="progress" aria-hidden="true"></div>
+  
+  <!-- Navbar -->
+  <header class="nav" role="navigation">
+    <div class="brand">
+      <div class="logo">AE</div>
+      <span>Ahmed ElHarmil</span>
+    </div>
+    <nav class="menu" aria-label="Primary">
+      <a href="#hero"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+      <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
+      <a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+      <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+  
+  <!-- Mobile menu -->
+  <nav class="mobile" id="mobileMenu" aria-label="Mobile"></nav>
+  
+  <!-- Hero Section -->
+  <section id="hero" class="hero container">
+    <div class="reveal">
+      <h1>Ahmed Hussein Othman ElHarmil</h1>
+      <h3>SOC Analyst — Cybersecurity & Network Resilience</h3>
+      <p class="lead">Protecting systems, detecting threats, and ensuring business continuity through proactive monitoring and secure architecture.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="#projects">
+          <i class="fa-solid fa-rocket"></i> View Projects
+        </a>
+        <a class="btn" href="#contact">
+          <i class="fa-solid fa-paper-plane"></i> Contact Me
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section id="about" class="container reveal">
+    <div>
+      <h2><i class="fa-solid fa-user"></i> About Me</h2>
+      <p>Final-year IT student and SOC Analyst specializing in threat detection, incident response, and secure network design. Experienced with Cisco, Fortinet, Wireshark, Splunk/Elastic, and SIEM workflows. I automate tasks with Python and continuously improve detection capabilities.</p>
+      <div class="grid" style="margin-top: 30px;">
+        <div class="card">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>Education</h3>
+          <p>Bachelor of Information Technology - Cairo University</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-briefcase"></i>
+          <h3>Experience</h3>
+          <p>3+ years in cybersecurity with focus on SOC operations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section id="skills" class="container reveal">
+    <div>
+      <h2><i class="fa-solid fa-code"></i> Skills</h2>
+      <div class="grid">
+        <div class="card skill-card">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h3>Security Monitoring</h3>
+          <p>SIEM, IDS/IPS, Splunk, Elastic</p>
+        </div>
+        <div class="card skill-card">
+          <i class="fa-solid fa-bug"></i>
+          <h3>Incident Response</h3>
+          <p>Triage, Containment, Forensics</p>
+        </div>
+        <div class="card skill-card">
+          <i class="fa-solid fa-network-wired"></i>
+          <h3>Network Engineering</h3>
+          <p>Cisco, VLANs, Routing</p>
+        </div>
+        <div class="card skill-card">
+          <i class="fa-solid fa-cloud"></i>
+          <h3>Cloud Security</h3>
+          <p>Azure, AWS, Huawei Cloud</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projects Section with 3D Cards -->
+  <section id="projects" class="container reveal">
+    <div>
+      <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <div class="card-front">
+            <i class="fa-solid fa-skull-crossbones"></i>
+            <h3>Advanced Threat Hunting</h3>
+            <p>Security Project</p>
+          </div>
+          <div class="card-back">
+            <h3>Advanced Threat Hunting</h3>
+            <p>Built SIEM detections for ransomware TTPs (MITRE ATT&CK), authored correlation rules, and delivered playbooks.</p>
+            <p class="tech">Splunk, Elastic, Sigma</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="card-front">
+            <i class="fa-solid fa-user-shield"></i>
+            <h3>Incident Response</h3>
+            <p>Security Project</p>
+          </div>
+          <div class="card-back">
+            <h3>Incident Response</h3>
+            <p>Contained credential theft incident, removed persistence, and hardened endpoints with LSASS protections.</p>
+            <p class="tech">EDR, Windows Security</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="card-front">
+            <i class="fa-solid fa-network-wired"></i>
+            <h3>Network Stabilization</h3>
+            <p>Network Project</p>
+          </div>
+          <div class="card-back">
+            <h3>Network Stabilization</h3>
+            <p>Reduced downtime by ~70% via VLAN segmentation, QoS, and firewall policy tuning.</p>
+            <p class="tech">Cisco, Fortinet, Wireshark</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="card-front">
+            <i class="fa-solid fa-cloud"></i>
+            <h3>Cloud Migration</h3>
+            <p>Cloud Project</p>
+          </div>
+          <div class="card-back">
+            <h3>Cloud Migration</h3>
+            <p>Migrated services to Huawei Cloud with layered controls: VPC, security groups, and key management.</p>
+            <p class="tech">Huawei Cloud, Cloud Security</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="container reveal">
+    <div class="contact-card card">
+      <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <h3>Email</h3>
+            <a href="mailto:ahmedelharmil30@gmail.com">ahmedelharmil30@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <h3>Phone</h3>
+            <a href="tel:01148643216">01148643216</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-brands fa-linkedin"></i>
+          <div>
+            <h3>LinkedIn</h3>
+            <a href="https://linkedin.com/in/ahmed-el-harmil1" target="_blank">ahmed-el-harmil1</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <h3>Location</h3>
+            <p>Cairo, Egypt</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Ahmed ElHarmil — SOC Analyst • Cairo, Egypt</p>
+    <div class="social-links">
+      <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+  
+  <!-- Back to top -->
+  <button id="toTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>
