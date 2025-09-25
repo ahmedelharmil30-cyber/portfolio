@@ -1,4 +1,4 @@
-:root {
+ :root {
             --bg: #000000;
             --surface: #111111;
             --elev: #1a1a1a;
@@ -539,110 +539,70 @@
             color: #f59e0b;
         }
         
-        /* Courses Section */
+        /* Courses Section - Updated Layout */
         .courses {
             background: rgba(0, 0, 0, 0.15);
         }
         
-        .timeline {
-            position: relative;
+        .courses-container {
             max-width: 900px;
             margin: 50px auto 0;
         }
         
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: var(--accent-gradient);
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 60px;
-            width: 100%;
-        }
-        
-        .timeline-item:nth-child(odd) {
-            padding-right: 50%;
-            text-align: right;
-        }
-        
-        .timeline-item:nth-child(even) {
-            padding-left: 50%;
-        }
-        
-        .timeline-content {
+        .course-item {
             background: rgba(26, 26, 26, 0.5);
             border-radius: var(--radius);
             padding: 35px;
+            margin-bottom: 30px;
             box-shadow: var(--card-shadow);
             border: 1px solid rgba(0, 255, 157, 0.1);
             transition: var(--transition);
-            position: relative;
             transform: translateY(0);
             backdrop-filter: blur(10px);
         }
         
-        .timeline-content:hover {
+        .course-item:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow);
             border-color: rgba(0, 255, 157, 0.3);
         }
         
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            width: 25px;
-            height: 25px;
-            background: var(--accent-gradient);
-            border-radius: 50%;
-            border: 4px solid var(--bg);
+        .course-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
         }
         
-        .timeline-item:nth-child(odd) .timeline-content::before {
-            right: -62px;
-        }
-        
-        .timeline-item:nth-child(even) .timeline-content::before {
-            left: -62px;
-        }
-        
-        .timeline-content h3 {
+        .course-title h3 {
             font-size: 1.6rem;
             color: var(--accent);
-            margin-bottom: 20px;
+            margin-bottom: 5px;
         }
         
-        .timeline-content .date {
+        .course-date {
             background: rgba(0, 255, 157, 0.15);
             color: var(--accent);
             padding: 8px 20px;
             border-radius: 50px;
-            display: inline-block;
-            margin-bottom: 20px;
             font-size: 0.95rem;
             font-weight: 700;
+            white-space: nowrap;
         }
         
-        .timeline-content ul {
+        .course-content ul {
             padding-left: 25px;
             margin-top: 20px;
         }
         
-        .timeline-content li {
+        .course-content li {
             margin-bottom: 15px;
             position: relative;
             padding-left: 15px;
         }
         
-        .timeline-content li::before {
+        .course-content li::before {
             content: '▹';
             color: var(--accent);
             position: absolute;
@@ -931,18 +891,13 @@
         
         /* Responsive */
         @media (max-width: 1100px) {
-            .timeline::before {
-                left: 40px;
+            .course-header {
+                flex-direction: column;
+                align-items: flex-start;
             }
-
-            .timeline-item:nth-child(odd),
-            .timeline-item:nth-child(even) {
-                padding: 0 0 0 80px;
-                text-align: left;
-            }
-
-            .timeline-content::before {
-                left: -62px;
+            
+            .course-date {
+                margin-top: 10px;
             }
         }
         
@@ -975,19 +930,6 @@
             
             .hero h3 {
                 font-size: 1.5rem;
-            }
-
-            .timeline::before {
-                left: 30px;
-            }
-
-            .timeline-item:nth-child(odd),
-            .timeline-item:nth-child(even) {
-                padding: 0 0 0 60px;
-            }
-
-            .timeline-content::before {
-                left: -45px;
             }
         }
         
@@ -1027,22 +969,6 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
-
-            .timeline::before {
-                left: 20px;
-            }
-
-            .timeline-item:nth-child(odd),
-            .timeline-item:nth-child(even) {
-                padding: 0 0 0 45px;
-            }
-
-            .timeline-content::before {
-                left: -35px;
-                top: 30px;
-                width: 20px;
-                height: 20px;
-            }
         }
         
         @media (max-width: 480px) {
@@ -1066,5 +992,8 @@
                 width: 42px;
                 height: 42px;
             }
+            
+            .course-item {
+                padding: 25px 20px;
+            }
         }
-    
