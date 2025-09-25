@@ -1,4 +1,4 @@
-// Create particles background
+ // Create particles background
         function createParticles() {
             const container = document.getElementById('particles-js');
             const particleCount = 80;
@@ -131,3 +131,4 @@
         
         // Initialize particles on page load
         window.addEventListener('load', createParticles);
+    
