@@ -3,20 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed ElHarmil | Cybersecurity Specialist</title>
+    <title>Ahmed ElHarmil | SOC Analyst & Cybersecurity Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Dynamic Color Indicator -->
+    <div class="color-indicator" id="colorIndicator">
+        <div class="color-pulse"></div>
+        <div class="color-info">
+            <span id="colorName">Cyber Green</span>
+            <span id="colorHex">#00FF9D</span>
+        </div>
+    </div>
+
     <!-- Particles Background -->
     <div class="particles-container" id="particles-js"></div>
     
-    <!-- Toast Notification -->
-    <div class="toast" id="toast">
-        <i class="fab fa-discord"></i>
-        <span>Discord username copied to clipboard!</span>
-    </div>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
     
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle"></i>
+        <span>Message sent successfully!</span>
+    </div>
+
     <div id="root">
         <!-- Navbar -->
         <nav class="navbar">
@@ -27,9 +47,8 @@
             <div class="nav-links">
                 <a href="#home"><i class="fas fa-home"></i> Home</a>
                 <a href="#about"><i class="fas fa-user"></i> About</a>
-                <a href="#services"><i class="fas fa-server"></i> Services</a>
-                <a href="#certs"><i class="fas fa-certificate"></i> Certifications</a>
-                <a href="#courses"><i class="fas fa-graduation-cap"></i> Courses</a>
+                <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
+                <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
                 <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
                 <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
             </div>
@@ -42,16 +61,44 @@
         <section id="home" class="hero">
             <div class="container">
                 <div class="hero-content fade-in">
-                    <h1>Cybersecurity Specialist & SOC Analyst</h1>
-                    <h3>Ahmed Hussein Othman ElHarmil</h3>
-                    <p>Protecting digital ecosystems through advanced threat detection, incident response, and secure network architecture. Specializing in SIEM solutions, cloud security, and network defense with a focus on proactive security measures.</p>
+                    <div class="hero-badge">
+                        <span><i class="fas fa-shield-alt"></i> SOC Analyst</span>
+                    </div>
+                    <h1>Ahmed ElHarmil</h1>
+                    <h2 class="typing-text">Cybersecurity Engineer & Network Security Specialist</h2>
+                    <p>Protecting digital infrastructures through advanced threat intelligence, incident response, and secure architecture design. Specializing in SOC operations, cloud security, and ethical hacking methodologies.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="12">0</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="3">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
                     <div class="hero-buttons">
-                        <a href="https://drive.google.com/uc?export=download&id=1ZY-hva9oDqo5ML0TyO5YITNcvwlwknEj" class="btn btn-primary" download="Ahmed_ElHarmil_CV.pdf">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Hire Me
+                        </a>
+                        <a href="https://drive.google.com/uc?export=download&id=1ZY-hva9oDqo5ML0TyO5YITNcvwlwknEj" class="btn btn-outline" download="Ahmed_ElHarmil_CV.pdf">
                             <i class="fas fa-download"></i> Download CV
                         </a>
-                        <a href="#contact" class="btn btn-outline">
-                            <i class="fas fa-paper-plane"></i> Contact Me
-                        </a>
+                    </div>
+                </div>
+                <div class="hero-image fade-in">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="floating-tech">
+                        <span class="tech-tag"><i class="fab fa-linux"></i></span>
+                        <span class="tech-tag"><i class="fas fa-shield-alt"></i></span>
+                        <span class="tech-tag"><i class="fas fa-cloud"></i></span>
+                        <span class="tech-tag"><i class="fas fa-network-wired"></i></span>
                     </div>
                 </div>
             </div>
@@ -60,204 +107,220 @@
         <!-- About Section -->
         <section id="about">
             <div class="container">
-                <h2><i class="fas fa-user"></i> About Me</h2>
-                <p class="fade-in">Final-year IT student and working SOC Analyst with expertise in threat detection, incident response, and secure network design. Experienced with Cisco, Fortinet, Wireshark, Splunk/Elastic, and SIEM workflows.</p>
+                <div class="section-header">
+                    <span class="section-subtitle">About Me</span>
+                    <h2>Cybersecurity Professional</h2>
+                    <p>Information Technology student with a strong passion for cybersecurity, specializing in SOC operations, network security, and cloud security.</p>
+                </div>
                 
-                <div class="card-grid">
-                    <div class="card fade-in">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>Security Monitoring</h3>
-                        <p>Implementing and managing SIEM solutions, IDS/IPS systems, and security analytics platforms to detect and respond to threats in real-time across complex environments.</p>
+                <div class="about-grid">
+                    <div class="about-card fade-in">
+                        <div class="about-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Education</h3>
+                        <h4>Delta Technological University</h4>
+                        <p class="about-meta">Bachelor of Information Technology · 2022 - 2026</p>
+                        <p>Currently pursuing Professional Bachelor's degree in Information Technology with focus on cybersecurity, networking, and system administration.</p>
                     </div>
                     
-                    <div class="card fade-in">
-                        <i class="fas fa-network-wired"></i>
-                        <h3>Network Defense</h3>
-                        <p>Designing and securing network infrastructures with Cisco technologies, advanced firewall configurations, and secure network protocols for optimal protection.</p>
+                    <div class="about-card fade-in">
+                        <div class="about-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Mission</h3>
+                        <p>To protect organizations from evolving cyber threats by implementing robust security measures, conducting thorough vulnerability assessments, and developing resilient security architectures.</p>
+                        <ul class="mission-list">
+                            <li><i class="fas fa-check"></i> Proactive Threat Hunting</li>
+                            <li><i class="fas fa-check"></i> Secure System Design</li>
+                            <li><i class="fas fa-check"></i> Compliance & Best Practices</li>
+                        </ul>
                     </div>
                     
-                    <div class="card fade-in">
-                        <i class="fas fa-cloud"></i>
-                        <h3>Cloud Security</h3>
-                        <p>Securing cloud environments across Azure, AWS, and Huawei Cloud with a focus on identity management, data protection, and compliance frameworks.</p>
+                    <div class="about-card fade-in">
+                        <div class="about-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Career Goals</h3>
+                        <p>Seeking roles in Security Operations Center (SOC), Network Security Engineering, or Cybersecurity Consulting to apply technical skills and contribute to organizational security.</p>
+                        <div class="goal-tags">
+                            <span class="goal-tag">SOC Analyst</span>
+                            <span class="goal-tag">Security Engineer</span>
+                            <span class="goal-tag">Penetration Tester</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Services Section -->
-        <section id="services" class="services">
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
             <div class="container">
-                <h2><i class="fas fa-server"></i> My Services</h2>
-                <p class="fade-in">Professional cybersecurity services tailored to protect your digital assets and infrastructure.</p>
+                <div class="section-header">
+                    <span class="section-subtitle">Technical Expertise</span>
+                    <h2>Skills & Technologies</h2>
+                    <p>Comprehensive skill set in cybersecurity tools, technologies, and methodologies</p>
+                </div>
                 
-                <div class="service-grid">
-                    <div class="service-card fade-in">
-                        <i class="fas fa-search"></i>
-                        <h3>Threat Detection</h3>
-                        <p>Advanced monitoring and detection of security threats using SIEM solutions and security analytics platforms.</p>
+                <div class="skills-grid">
+                    <div class="skill-category fade-in">
+                        <h3><i class="fas fa-shield-alt"></i> Security Operations</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">SIEM Solutions</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="85"></div>
+                                </div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Threat Detection</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="90"></div>
+                                </div>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Incident Response</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="80"></div>
+                                </div>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Vulnerability Assessment</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="85"></div>
+                                </div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="service-card fade-in">
-                        <i class="fas fa-shield-virus"></i>
-                        <h3>Incident Response</h3>
-                        <p>Rapid response to security incidents with containment, eradication, and recovery strategies.</p>
+                    <div class="skill-category fade-in">
+                        <h3><i class="fas fa-network-wired"></i> Network Security</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Firewall Configuration</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="88"></div>
+                                </div>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Cisco Technologies</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="82"></div>
+                                </div>
+                                <span class="skill-percent">82%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Fortinet Solutions</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="85"></div>
+                                </div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">VPN & Network Protocols</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="78"></div>
+                                </div>
+                                <span class="skill-percent">78%</span>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="service-card fade-in">
-                        <i class="fas fa-lock"></i>
-                        <h3>Vulnerability Management</h3>
-                        <p>Comprehensive vulnerability assessments and management programs to identify and remediate security weaknesses.</p>
-                    </div>
-                    
-                    <div class="service-card fade-in">
-                        <i class="fas fa-cloud"></i>
-                        <h3>Cloud Security</h3>
-                        <p>Securing cloud environments with robust identity management, data protection, and compliance frameworks.</p>
-                    </div>
-                    
-                    <div class="service-card fade-in">
-                        <i class="fas fa-network-wired"></i>
-                        <h3>Network Security</h3>
-                        <p>Designing and implementing secure network architectures with advanced firewall configurations.</p>
-                    </div>
-                    
-                    <div class="service-card fade-in">
-                        <i class="fas fa-user-shield"></i>
-                        <h3>Security Training</h3>
-                        <p>Custom security awareness training programs to educate your team on cybersecurity best practices.</p>
+                    <div class="skill-category fade-in">
+                        <h3><i class="fas fa-code"></i> Tools & Technologies</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Wireshark</span>
+                            <span class="skill-tag">Nmap</span>
+                            <span class="skill-tag">Metasploit</span>
+                            <span class="skill-tag">Burp Suite</span>
+                            <span class="skill-tag">Splunk</span>
+                            <span class="skill-tag">Elastic Stack</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Bash Scripting</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">AWS/Azure Security</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">OWASP ZAP</span>
+                            <span class="skill-tag">Nessus</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Certifications Section -->
-        <section id="certs" class="certs">
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
             <div class="container">
-                <h2><i class="fas fa-certificate"></i> Certifications</h2>
-                <p class="fade-in">Continuous learning and professional development through industry-recognized certifications.</p>
-                
-                <div class="cert-grid">
-                    <a href="https://drive.google.com/file/d/1Pnxrc9wrrdk_kgnSKzCtFIpJv4-MJ9jN/view?usp=sharing" target="_blank" class="cert-card completed fade-in">
-                        <div class="cert-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h3>HCCDA Tech Essential</h3>
-                        <p>Completed on Jul 30, 2025</p>
-                        <div class="cert-status">Completed</div>
-                    </a>
-                    
-                    <div class="cert-card progress fade-in">
-                        <div class="cert-icon">
-                            <i class="fas fa-spinner fa-spin"></i>
-                        </div>
-                        <h3>HCIA Security</h3>
-                        <p>Currently in progress</p>
-                        <div class="cert-status">In Progress</div>
-                    </div>
-                    
-                    <div class="cert-card progress fade-in">
-                        <div class="cert-icon">
-                            <i class="fas fa-spinner fa-spin"></i>
-                        </div>
-                        <h3>HCIA Datacom</h3>
-                        <p>Currently in progress</p>
-                        <div class="cert-status">In Progress</div>
-                    </div>
+                <div class="section-header">
+                    <span class="section-subtitle">Professional Journey</span>
+                    <h2>Experience & Training</h2>
+                    <p>Hands-on experience through professional training programs and real-world projects</p>
                 </div>
-            </div>
-        </section>
-        
-        <!-- Courses Section - Updated Layout -->
-        <section id="courses" class="courses">
-            <div class="container">
-                <h2><i class="fas fa-graduation-cap"></i> Courses & Training</h2>
-                <p class="fade-in">Professional development through specialized cybersecurity courses and hands-on training.</p>
                 
-                <div class="courses-container">
-                    <div class="course-item fade-in">
-                        <div class="course-header">
-                            <div class="course-title">
-                                <h3>DEPI Fortinet Program</h3>
-                                <p>Egypt Digital Pioneer Initiative (EDPI)</p>
-                            </div>
-                            <div class="course-date">Jul 2025 – Present</div>
-                        </div>
-                        <div class="course-content">
+                <div class="timeline">
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-date">Jan 2026 - Present</div>
+                        <div class="timeline-content">
+                            <h3>Linux Administration Trainee</h3>
+                            <h4>National Telecommunication Institute (NTI)</h4>
+                            <p>Studying Red Hat Linux System Administration through remote training at NTI.</p>
                             <ul>
-                                <li>Selected as a student in the Egypt Digital Pioneers Initiative (EDPI)</li>
-                                <li>Comprehensive training in CCNA fundamentals and Fortinet network security concepts</li>
-                                <li>Advanced firewall configuration and rule implementation</li>
-                                <li>Hands-on lab exercises for FortiGate setup and deployment</li>
-                                <li>Network security architecture design and implementation</li>
-                                <li>Perimeter defense strategies using Fortinet solutions</li>
-                                <li>Professional development in communication, collaboration, and problem-solving</li>
-                                <li>Real-world scenario simulations and threat mitigation exercises</li>
-                                <li>Continuous assessment through practical assignments and projects</li>
+                                <li>Managing Linux users, groups, permissions, and ownership</li>
+                                <li>Configuring network settings, SSH, and security controls</li>
+                                <li>Working with file systems and disk management</li>
+                                <li>System monitoring and process management</li>
                             </ul>
                         </div>
                     </div>
                     
-                    <div class="course-item fade-in">
-                        <div class="course-header">
-                            <div class="course-title">
-                                <h3>Network Security & Cyber Ops</h3>
-                                <p>NTI – Damanhour, Beheira</p>
-                            </div>
-                            <div class="course-date">May 2025 – Jul 2025</div>
-                        </div>
-                        <div class="course-content">
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-date">Jul 2025 - Dec 2025</div>
+                        <div class="timeline-content">
+                            <h3>Fortinet Cybersecurity Engineer</h3>
+                            <h4>Digital Egypt Pioneers Initiative (DEPI)</h4>
+                            <p>Advanced training in Fortinet security solutions and network protection.</p>
                             <ul>
-                                <li>90-hour intensive technical training in Cisco Network Security</li>
-                                <li>CyberOps fundamentals including threat analysis and incident response</li>
-                                <li>Implementation of firewall rules and access control policies</li>
-                                <li>Simulated cyber attack scenarios and response strategies</li>
-                                <li>Network traffic analysis using Wireshark</li>
-                                <li>Vulnerability assessments with Nmap and Nessus</li>
-                                <li>Security Information and Event Management (SIEM) basics</li>
-                                <li>30-hour soft skills training covering teamwork, communication, and problem-solving</li>
-                                <li>Security policy development and implementation</li>
-                            </ul>
-                            
-                            <h4 style="margin-top: 25px;">Hands-on Labs:</h4>
-                            <ul>
-                                <li><strong>Network Design Simulation:</strong> Designed and implemented a multi-department VLAN-based network using Cisco Packet Tracer. Configured static routing and ACLs to isolate sensitive data. Applied subnetting for IP optimization and simulated enterprise traffic to validate security policies.</li>
-                                <li><strong>Vulnerability Scanning Lab:</strong> Conducted vulnerability scans with Nmap, identifying over 10 open ports and system misconfigurations. Used Wireshark to analyze suspicious network packets and simulate real-world intrusion scenarios.</li>
-                                <li><strong>Firewall Configuration Lab:</strong> Implemented stateful firewall rules on Cisco ASA devices to control traffic flow between security zones. Tested rules with simulated attacks to verify effectiveness.</li>
-                                <li><strong>Incident Response Simulation:</strong> Developed and executed an incident response plan for a simulated ransomware attack, including containment, eradication, and recovery procedures.</li>
+                                <li>Hands-on expertise in FortiGate firewalls and FortiManager</li>
+                                <li>Designed secure network architectures for threat prevention</li>
+                                <li>Reduced simulated attack surfaces by 40% in lab environments</li>
+                                <li>Automated security rule deployments across multiple devices</li>
                             </ul>
                         </div>
                     </div>
                     
-                    <div class="course-item fade-in">
-                        <div class="course-header">
-                            <div class="course-title">
-                                <h3>Network Training Program</h3>
-                                <p>Training and Development Chief Sector, Ahmed Elaref</p>
-                            </div>
-                            <div class="course-date">Aug 2023 – Sep 2023</div>
-                        </div>
-                        <div class="course-content">
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-date">May 2025 - Jul 2025</div>
+                        <div class="timeline-content">
+                            <h3>CyberOps Associate Trainee</h3>
+                            <h4>National Telecommunication Institute (NTI)</h4>
+                            <p>Intensive CyberOps Associate training focusing on SOC fundamentals.</p>
                             <ul>
-                                <li>Comprehensive training in fundamental networking concepts and protocols</li>
-                                <li>In-depth study of TCP/IP standard and protocol stack implementation</li>
-                                <li>Introduction to routing protocols: OSPF, BGP, and EIGRP fundamentals</li>
-                                <li>Switching concepts including VLANs, STP, and switch configuration</li>
-                                <li>Practical lab exercises on network configuration and troubleshooting</li>
-                                <li>Data center infrastructure and operations overview</li>
-                                <li>Network security fundamentals and best practices</li>
-                                <li>IP addressing and subnetting techniques</li>
-                                <li>Network monitoring and performance analysis</li>
-                                <li>On-site data center visit with practical demonstrations</li>
+                                <li>Security event monitoring and analysis using SIEM concepts</li>
+                                <li>Network security fundamentals and threat detection</li>
+                                <li>Incident response lifecycle and alert handling</li>
+                                <li>Log analysis and basic digital forensics</li>
                             </ul>
-                            
-                            <h4 style="margin-top: 25px;">Key Projects:</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-date">Aug 2023 - Sep 2023</div>
+                        <div class="timeline-content">
+                            <h3>Network Training Program</h3>
+                            <h4>Telecom Egypt</h4>
+                            <p>Practical networking training with hands-on configuration experience.</p>
                             <ul>
-                                <li>Designed and implemented a multi-router network topology with OSPF routing</li>
-                                <li>Configured VLANs across multiple switches for network segmentation</li>
-                                <li>Performed subnetting for a medium-sized enterprise network</li>
-                                <li>Implemented basic firewall rules for network security</li>
-                                <li>Conducted network troubleshooting exercises using CLI tools</li>
+                                <li>Configured and monitored network devices</li>
+                                <li>Performed network troubleshooting and issue resolution</li>
+                                <li>Applied theoretical knowledge to real-world scenarios</li>
+                                <li>Developed team collaboration skills</li>
                             </ul>
                         </div>
                     </div>
@@ -266,54 +329,72 @@
         </section>
         
         <!-- Projects Section -->
-        <section id="projects" class="projects">
+        <section id="projects" class="projects-section">
             <div class="container">
-                <h2><i class="fas fa-project-diagram"></i> Projects</h2>
-                <p class="fade-in">Explore my cybersecurity projects and technical implementations.</p>
+                <div class="section-header">
+                    <span class="section-subtitle">Portfolio</span>
+                    <h2>Projects & Labs</h2>
+                    <p>Practical implementations and security lab exercises</p>
+                </div>
                 
-                <div class="project-grid">
+                <div class="projects-grid">
                     <div class="project-card fade-in">
-                        <div class="project-header">
-                            <h3><i class="fas fa-shield-virus"></i> Enterprise Threat Detection</h3>
+                        <div class="project-image">
+                            <i class="fas fa-shield-virus"></i>
                         </div>
-                        <div class="project-body">
-                            <p>Developed a comprehensive threat detection system using Splunk and Elastic Stack to monitor network traffic and identify malicious activities across enterprise networks.</p>
-                            <div class="tech-stack">
-                                <span class="tech-item">Splunk</span>
-                                <span class="tech-item">Elastic Stack</span>
-                                <span class="tech-item">Python</span>
-                                <span class="tech-item">Snort</span>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Fortinet</span>
+                                <span class="project-tag">Security</span>
                             </div>
+                            <h3>Enterprise Firewall Implementation</h3>
+                            <p>Designed and deployed FortiGate firewall infrastructure with centralized management using FortiManager for enterprise network protection.</p>
+                            <div class="project-features">
+                                <span><i class="fas fa-check"></i> 40% Attack Surface Reduction</span>
+                                <span><i class="fas fa-check"></i> Automated Rule Deployment</span>
+                                <span><i class="fas fa-check"></i> Real-time Threat Prevention</span>
+                            </div>
+                            <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     
                     <div class="project-card fade-in">
-                        <div class="project-header">
-                            <h3><i class="fas fa-cloud-upload-alt"></i> Secure Cloud Migration</h3>
+                        <div class="project-image">
+                            <i class="fas fa-network-wired"></i>
                         </div>
-                        <div class="project-body">
-                            <p>Designed and implemented a secure migration strategy for enterprise applications to Huawei Cloud with layered security controls and compliance frameworks.</p>
-                            <div class="tech-stack">
-                                <span class="tech-item">Huawei Cloud</span>
-                                <span class="tech-item">Terraform</span>
-                                <span class="tech-item">Kubernetes</span>
-                                <span class="tech-item">IAM</span>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Cisco</span>
+                                <span class="project-tag">Network</span>
                             </div>
+                            <h3>Network Security Hardening</h3>
+                            <p>Conducted security assessment and hardening of network infrastructure with Cisco technologies, reducing vulnerabilities by 75%.</p>
+                            <div class="project-features">
+                                <span><i class="fas fa-check"></i> Vulnerability Assessment</span>
+                                <span><i class="fas fa-check"></i> ACL Implementation</span>
+                                <span><i class="fas fa-check"></i> Traffic Analysis</span>
+                            </div>
+                            <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     
                     <div class="project-card fade-in">
-                        <div class="project-header">
-                            <h3><i class="fas fa-network-wired"></i> Network Hardening</h3>
+                        <div class="project-image">
+                            <i class="fas fa-linux"></i>
                         </div>
-                        <div class="project-body">
-                            <p>Conducted security assessment and hardening of network infrastructure for a financial institution, reducing vulnerabilities by 75% through strategic configurations.</p>
-                            <div class="tech-stack">
-                                <span class="tech-item">Cisco</span>
-                                <span class="tech-item">Fortinet</span>
-                                <span class="tech-item">Wireshark</span>
-                                <span class="tech-item">Nessus</span>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Linux</span>
+                                <span class="project-tag">Administration</span>
                             </div>
+                            <h3>Linux Security Server Setup</h3>
+                            <p>Configured secure Linux server environment with user management, firewall rules, SSH hardening, and monitoring systems.</p>
+                            <div class="project-features">
+                                <span><i class="fas fa-check"></i> SSH Key Authentication</span>
+                                <span><i class="fas fa-check"></i> Firewall Configuration</span>
+                                <span><i class="fas fa-check"></i> Log Monitoring</span>
+                            </div>
+                            <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -321,37 +402,77 @@
         </section>
         
         <!-- Contact Section -->
-        <section id="contact">
+        <section id="contact" class="contact-section">
             <div class="container">
-                <h2><i class="fas fa-envelope"></i> Contact</h2>
-                <p class="fade-in">Get in touch with me for collaboration opportunities or inquiries.</p>
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2>Contact Me</h2>
+                    <p>Ready to discuss security solutions or collaboration opportunities</p>
+                </div>
                 
-                <div class="contact-grid">
-                    <div class="contact-card fade-in fade-loop">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
+                <div class="contact-container">
+                    <div class="contact-info fade-in">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <p>Primary contact method</p>
+                            <a href="mailto:1223019@dtu.edu.eg">1223019@dtu.edu.eg</a>
+                            <a href="mailto:ahmedelharmil30@gmail.com" class="secondary-email">ahmedelharmil30@gmail.com</a>
                         </div>
-                        <h3>Email</h3>
-                        <p class="contact-info">Primary contact method</p>
-                        <a href="mailto:ahmedelharmil30@gmail.com" class="contact-link">ahmedelharmil30@gmail.com</a>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>Phone</h3>
+                            <p>Available for calls</p>
+                            <a href="tel:01148643216">01148643216</a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Location</h3>
+                            <p>Based in</p>
+                            <span>Tanta, Egypt</span>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <h3>LinkedIn</h3>
+                            <p>Professional profile</p>
+                            <a href="https://linkedin.com/in/ahmed-el-harmil1" target="_blank">View Profile</a>
+                        </div>
                     </div>
                     
-                    <div class="contact-card fade-in fade-loop">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h3>Phone</h3>
-                        <p class="contact-info">Direct contact</p>
-                        <a href="tel:01148643216" class="contact-link">01148643216</a>
-                    </div>
-                    
-                    <div class="contact-card fade-in fade-loop">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <h3>LinkedIn</h3>
-                        <p class="contact-info">Professional profile</p>
-                        <a href="https://linkedin.com/in/ahmed-el-harmil1" target="_blank" class="contact-link">View Profile</a>
+                    <div class="contact-form fade-in">
+                        <h3>Send Message</h3>
+                        <form id="emailForm">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Your Name" required>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Your Email" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" placeholder="Subject" required>
+                                <i class="fas fa-tag"></i>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -361,32 +482,59 @@
         <footer>
             <div class="container">
                 <div class="footer-content">
-                    <div class="footer-logo">AE</div>
-                    <h3>Ahmed ElHarmil</h3>
-                    <p>SOC Analyst & Cybersecurity Specialist</p>
-                    
-                    <div class="social-links">
-                        <a href="https://github.com/ahmedelharmil30-cyber" target="_blank" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" id="discord-btn" title="Discord">
-                            <i class="fab fa-discord"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/ahmed-el-harmil1" target="_blank" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:ahmedelharmil30@gmail.com" title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">AE</div>
+                        <h3>Ahmed ElHarmil</h3>
+                        <p>SOC Analyst & Cybersecurity Engineer</p>
                     </div>
                     
-                    <p class="copyright">© 2025 Ahmed ElHarmil. All rights reserved. | Cairo, Egypt</p>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    
+                    <div class="footer-services">
+                        <h4>Services</h4>
+                        <a href="#">Security Assessment</a>
+                        <a href="#">Network Hardening</a>
+                        <a href="#">Incident Response</a>
+                        <a href="#">Security Training</a>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <h4>Connect</h4>
+                        <div class="social-icons">
+                            <a href="https://github.com/ahmedelharmil30-cyber" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/ahmed-el-harmil1" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:1223019@dtu.edu.eg">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                        <p class="newsletter-text">Subscribe for security insights</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Ahmed ElHarmil. All rights reserved.</p>
+                    <p>Delta Technological University | Information Technology Student</p>
                 </div>
             </div>
         </footer>
     </div>
 
-   <script src="script.js">
-       </script>
+    <script src="script.js"></script>
 </body>
 </html>
